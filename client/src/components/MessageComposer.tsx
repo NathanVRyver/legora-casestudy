@@ -23,14 +23,12 @@ interface Message {
 
 interface MessageComposerProps {
   selectedUser: User;
-  onSendMessage: (content: string) => void;
   onBack?: () => void;
   loading?: boolean;
 }
 
 export function MessageComposer({
   selectedUser,
-  onSendMessage,
   onBack,
   loading,
 }: MessageComposerProps) {
@@ -155,8 +153,6 @@ export function MessageComposer({
 
         if (response.success) {
           setMessage('');
-          // Call the callback to notify parent component
-          onSendMessage(message.trim());
           // Reload conversation to show the new message
           await loadConversation();
         } else {

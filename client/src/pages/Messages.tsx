@@ -17,16 +17,6 @@ export function MessagesPage() {
     setSelectedUser(selectedUser);
   };
 
-  const handleSendMessage = async (content: string) => {
-    if (!selectedUser || !user) {
-      console.error('Cannot send message: no selected user or not authenticated');
-      return;
-    }
-    
-    // The MessageComposer handles the actual sending internally
-    // This is just a placeholder callback
-    console.log('Sending message:', content, 'to:', selectedUser.username);
-  };
 
   if (!user) {
     return (
@@ -58,7 +48,6 @@ export function MessagesPage() {
         {selectedUser ? (
           <MessageComposer 
             selectedUser={selectedUser}
-            onSendMessage={handleSendMessage}
           />
         ) : (
           <div className="flex items-center justify-center h-full bg-gray-50">
