@@ -72,6 +72,7 @@ The app will be available at http://localhost:3000
 ```
 
 # Timer
+<img width="1105" height="823" alt="Screenshot 2025-08-19 at 04 19 54" src="https://github.com/user-attachments/assets/dfbeef83-f183-49d4-82f4-cdca6ee5ee98" />
 
 
 
